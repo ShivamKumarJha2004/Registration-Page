@@ -1,0 +1,39 @@
+﻿@model RegistrationPage.Models.User;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <style>
+        body {
+            height: 100vh;
+            background-color:lightsteelblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container bg-dark text-white" style="position:relative; top:2rem; padding:1rem;text-align:center;font-family:poppins">
+        <h2>Registration Successful!</h2>
+        <p>Thank you, <strong>@ViewBag.Name</strong>, for registering.</p>
+        <p>@ViewBag.Message</p>
+    </div>
+    <div>
+        <a asp-controller="signup" asp-action="signupsuccess" class="btn btn-warning" style="font-size:20px;padding:9px 7px;position:relative;top:5rem;left:30rem; font-family:roboto"> Show Users</a>
+    </div>
+    <div>
+        <div>
+            <a asp-controller="signup" asp-action="Index" class="btn btn-secondary" style="font-size:20px;padding:9px 22px;position:relative;left:40rem; top:1.8rem;font-family:roboto">Go Back</a>
+        </div>
+        
+</body>
+
+</html>
+
